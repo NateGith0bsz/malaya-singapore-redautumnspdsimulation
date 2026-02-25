@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Autumn: Malaya–Singapore (1947–1965)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+
+    <header>
+        <h1>RED AUTUMN: MALAYA–SINGAPORE</h1>
+        <h2>The Struggle Before the Republic</h2>
+    </header>
+
+    <!-- STATS PANEL -->
+    <section id="stats-panel">
+        <div class="stat">PS: <span id="stat-ps">50</span></div>
+        <div class="stat">OS: <span id="stat-os">50</span></div>
+        <div class="stat">LEG: <span id="stat-leg">50</span></div>
+        <div class="stat">STAB: <span id="stat-stab">50</span></div>
+        <div class="stat">FU: <span id="stat-fu">50</span></div>
+        <div class="stat">RESOURCES: <span id="stat-resources">30</span></div>
+        <div class="stat" id="budget-container" style="display:none;">
+            BUDGET: <span id="stat-budget">50</span>
+        </div>
+        <div class="stat">MONTH: <span id="stat-turn">January 1947</span></div>
+    </section>
+
+    <!-- ADVISORS -->
+    <section id="advisors-panel">
+        <h3>Your Advisors</h3>
+        <div id="advisor-slots"></div>
+    </section>
+
+    <!-- CARDS -->
+    <section id="card-draw-area">
+        <h3>Choose an Action</h3>
+        <div id="card-container"></div>
+    </section>
+
+    <!-- EVENT LOG -->
+    <section id="log-panel">
+        <h3>Event Log</h3>
+        <div id="log-content"></div>
+    </section>
+
+    <button id="end-turn-btn">End Turn</button>
+
+    <!-- SANDBOX BUTTON -->
+    <button id="sandbox-btn">Sandbox Cheats</button>
+
+    <!-- SANDBOX MENU -->
+    <div id="sandbox-menu" style="display:none;">
+        <h3>Sandbox Cheats</h3>
+        <button class="sandbox-btn" data-cheat="ps10">+10 PS</button>
+        <button class="sandbox-btn" data-cheat="os10">+10 OS</button>
+        <button class="sandbox-btn" data-cheat="leg10">+10 LEG</button>
+        <button class="sandbox-btn" data-cheat="stab10">+10 STAB</button>
+        <button class="sandbox-btn" data-cheat="fu10">+10 FU</button>
+        <button class="sandbox-btn" data-cheat="res10">+10 Resources</button>
+        <button class="sandbox-btn" data-cheat="bud10">+10 Budget</button>
+        <button class="sandbox-btn" data-cheat="skip">Skip Turn</button>
+        <button class="sandbox-btn" data-cheat="year">Skip Year</button>
+    </div>
+
+</div>
+
+<script src="engine/turnEngine.js"></script>
+<script src="engine/cardEngine.js"></script>
+<script src="engine/statsEngine.js"></script>
+<script src="engine/eventEngine.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
