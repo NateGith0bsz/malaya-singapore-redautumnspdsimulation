@@ -1,34 +1,35 @@
-// ============================
-// TURN ENGINE
-// Handles monthly turn cycles
-// ============================
-
 function endTurn() {
 
-    // Move to next month
+    // Advance month
     gameState.monthIndex++;
 
-    // New year rollover
     if (gameState.monthIndex >= 12) {
         gameState.monthIndex = 0;
         gameState.year++;
     }
 
-    // Update turn counter
     gameState.turn++;
 
-    // Update UI
+    // Update the date display
     document.getElementById("stat-turn").innerText =
         `${gameState.months[gameState.monthIndex]} ${gameState.year}`;
 
     // Trigger scheduled events
     processEventsForTurn();
 
-    // Draw next turn's cards
+    // Draw next cards
     drawCards();
 
-    // Update stats on screen
+    // Update stats display
     updateStatsDisplay();
+
+    // ⭐⭐ NEW ENGINE SYSTEMS (THIS IS THE FINAL STEP) ⭐⭐
+    checkForTransformation();  // Labour Front → NSSWP
+    runOppositionAI();         // AI agitation system
+    runCrisisChecks();         // Crisis penalties
+    runBudgetCycle();          // NSRS monthly budget
+    checkVictoryConditions();  // Win conditions
+    checkDefeatConditions();   // Lose conditions
 
     logEvent(`Turn ${gameState.turn} completed.`);
 }
