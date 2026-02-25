@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "nsswp",
+    "name": "National Socialist Singaporean Workers' Party",
+    "role": "ruling"
+  },
+  {
+    "id": "labour_front",
+    "name": "Labour Front",
+    "role": "party"
+  },
+  {
+    "id": "pkmm",
+    "name": "PKMM / Malay Left",
+    "role": "party"
+  },
+  {
+    "id": "mca",
+    "name": "MCA Reformist Wing",
+    "role": "party"
+  },
+  {
+    "id": "umno",
+    "name": "UMNO",
+    "role": "rival"
+  }
+]
