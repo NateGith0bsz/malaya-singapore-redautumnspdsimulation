@@ -1,3 +1,7 @@
+/* ============================================
+   GLOBAL LAYOUT
+   ============================================ */
+
 body {
     background-color: #111;
     color: #eee;
@@ -17,6 +21,10 @@ header {
     margin-bottom: 20px;
 }
 
+/* ============================================
+   STATS PANEL
+   ============================================ */
+
 #stats-panel {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +39,10 @@ header {
     padding: 8px 12px;
     border-radius: 6px;
 }
+
+/* ============================================
+   CARDS
+   ============================================ */
 
 #card-container {
     display: flex;
@@ -55,6 +67,10 @@ header {
     background: #2a2a2a;
 }
 
+/* ============================================
+   LOG PANEL
+   ============================================ */
+
 #log-panel {
     background: #1c1c1c;
     padding: 10px;
@@ -64,12 +80,38 @@ header {
     margin-bottom: 20px;
 }
 
-#end-turn-btn, #sandbox-btn {
+#log-content {
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+#end-turn-btn,
+#sandbox-btn {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 18px;
 }
+
+button {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* ============================================
+   SANDBOX CHEAT MENU
+   ============================================ */
 
 #sandbox-menu {
     background: #222;
@@ -86,4 +128,83 @@ header {
     margin: 8px auto;
     padding: 8px;
     font-size: 16px;
+}
+
+/* ============================================
+   PART 12 — UI ENHANCEMENTS
+   ============================================ */
+
+/* Generic UI boxes */
+.ui-box {
+    border: 1px solid #444;
+    background: #1a1a1a;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #eee;
+    border-radius: 6px;
+}
+
+/* Crisis Warning Box */
+.warning-box {
+    background: #8a0e0e;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    animation: pulseWarning 1.5s infinite;
+}
+
+/* Crisis warning animation */
+@keyframes pulseWarning {
+    0% { box-shadow: 0 0 0px #8a0e0e; }
+    50% { box-shadow: 0 0 15px #8a0e0e; }
+    100% { box-shadow: 0 0 0px #8a0e0e; }
+}
+
+/* NSSWP Banner */
+.banner {
+    background: #0f3e8a;
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Project Status Box */
+#project-box h3 {
+    margin: 0 0 8px 0;
+}
+
+#project-name,
+#project-progress {
+    font-size: 16px;
+}
+
+/* Opposition Heat Meter */
+#opposition-heat h3 {
+    margin: 0 0 8px 0;
+}
+
+#heat-value {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+/* Advisor Box */
+#advisor-box {
+    margin-top: 15px;
+}
+
+#advisor-list {
+    font-size: 16px;
+    line-height: 1.5em;
+    white-space: pre-line;
 }
