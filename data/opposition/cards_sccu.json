@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sccu_investor_flight",
+    "name": "Investor Flight Threatened",
+    "text": "Capitalist elites threaten capital withdrawal.",
+    "effects": { "budget": -5, "leg": -1 }
+  },
+  {
+    "id": "sccu_profiteering",
+    "name": "Profiteering Crisis",
+    "text": "Price manipulation causes inflationary pressure.",
+    "effects": { "budget": -3, "stab": -2 }
+  },
+  {
+    "id": "sccu_foreign_pressure",
+    "name": "Foreign Business Pressure",
+    "text": "Foreign business lobby undermines NSSWP policy.",
+    "effects": { "leg": -2 }
+  },
+  {
+    "id": "sccu_trade_disruption",
+    "name": "Trade Disruption Campaign",
+    "text": "Chamber-aligned merchants stage a slowdown.",
+    "effects": { "budget": -4, "stab": -2 }
+  }
+]
