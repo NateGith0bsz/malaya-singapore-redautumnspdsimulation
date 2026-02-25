@@ -1,1 +1,60 @@
-[]
+[
+  {
+    "id": "fundraiser",
+    "name": "Hold Fundraising Drive",
+    "text": "Your party organizes a fundraising event.",
+    "cost": 0,
+    "effects": {
+      "resources": 8
+    }
+  },
+  {
+    "id": "union_outreach",
+    "name": "Union Outreach Program",
+    "text": "Strengthen ties with local trade unions.",
+    "cost": 5,
+    "effects": {
+      "os": 3,
+      "ps": 1
+    }
+  },
+  {
+    "id": "newspaper",
+    "name": "Publish Propaganda Newspaper",
+    "text": "Produce political materials to win support.",
+    "cost": 6,
+    "effects": {
+      "ps": 2,
+      "leg": 1
+    }
+  },
+  {
+    "id": "youth_recruitment",
+    "name": "Recruit Youth Cadres",
+    "text": "Strengthen the party's future base.",
+    "cost": 4,
+    "effects": {
+      "fu": 2,
+      "os": 2
+    }
+  },
+  {
+    "id": "mass_rally",
+    "name": "Organize a Mass Rally",
+    "text": "Large-scale political rally across cities.",
+    "cost": 10,
+    "effects": {
+      "ps": 5,
+      "stab": -2
+    }
+  },
+  {
+    "id": "legal_challenge",
+    "name": "Launch Legal Challenge",
+    "text": "Fight unjust colonial policies in court.",
+    "cost": 8,
+    "effects": {
+      "leg": 4
+    }
+  }
+]
