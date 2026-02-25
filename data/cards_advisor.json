@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "lky_attack",
+    "name": "Legal Offensive",
+    "text": "Lee Kuan Yew launches a strategic legal strike.",
+    "effects": {
+      "leg": 5,
+      "stab": 2
+    }
+  },
+  {
+    "id": "lim_siong_mobilize",
+    "name": "Mass Mobilization",
+    "text": "Lim Chin Siong ignites the workers.",
+    "effects": {
+      "ps": 4,
+      "os": 3
+    }
+  },
+  {
+    "id": "marshall_speech",
+    "name": "Marshall’s Fiery Speech",
+    "text": "Huge public rally boosts morale.",
+    "effects": {
+      "ps": 6,
+      "stab": -3
+    }
+  },
+  {
+    "id": "goh_planning",
+    "name": "Economic Planning Session",
+    "text": "Technocratic analysis boosts efficiency.",
+    "effects": {
+      "resources": 8
+    }
+  }
+]
