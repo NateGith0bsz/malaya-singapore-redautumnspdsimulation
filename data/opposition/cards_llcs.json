@@ -1,0 +1,26 @@
+[
+  {
+    "id": "llcs_soviet_critique",
+    "name": "Left-Communist Critique of HSRE",
+    "text": "Denounces NSSWP’s cooperation with Holy Soviet Rus.",
+    "effects": { "leg": -2 }
+  },
+  {
+    "id": "llcs_worker_councils",
+    "name": "Illegal Workers’ Councils Form",
+    "text": "Parallel structures weaken the NSSWP's authority.",
+    "effects": { "stab": -3, "fu": -2 }
+  },
+  {
+    "id": "llcs_citywide_rumours",
+    "name": "Citywide Left-Communist Rumours",
+    "text": "Rumours of NSSWP corruption spread among workers.",
+    "effects": { "ps": -2 }
+  },
+  {
+    "id": "llcs_protest_march",
+    "name": "Left-Communist Protest March",
+    "text": "Radical march disrupts public order.",
+    "effects": { "stab": -4 }
+  }
+]
