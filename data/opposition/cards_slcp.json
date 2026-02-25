@@ -1,0 +1,26 @@
+[
+  {
+    "id": "slcp_parliamentary_obstruction",
+    "name": "Parliamentary Obstruction",
+    "text": "Liberals obstruct NSSWP reforms in the Assembly.",
+    "effects": { "leg": -2, "fu": -1 }
+  },
+  {
+    "id": "slcp_civil_society_campaign",
+    "name": "Civil Society Campaign",
+    "text": "NGO networks criticize NSSWP centralization.",
+    "effects": { "leg": -2 }
+  },
+  {
+    "id": "slcp_media_editorials",
+    "name": "Critical Editorials Published",
+    "text": "Newspapers accuse NSSWP of authoritarian tendencies.",
+    "effects": { "ps": -2 }
+  },
+  {
+    "id": "slcp_legal_challenge",
+    "name": "Legal Challenge Filed",
+    "text": "SLCP uses the courts to stall NSSWP policy.",
+    "effects": { "leg": -3 }
+  }
+]
