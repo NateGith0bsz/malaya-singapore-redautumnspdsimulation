@@ -1,0 +1,170 @@
+[
+  {
+    "id": "nsswp_housing_board",
+    "name": "Launch National Housing Board",
+    "text": "Mass housing program stabilizes society and demonstrates NSSWP competence.",
+    "cost": 10,
+    "effects": {
+      "stab": 6,
+      "leg": 4,
+      "budget": -5
+    }
+  },
+
+  {
+    "id": "workers_guard",
+    "name": "Expand Workers’ Security Guard",
+    "text": "Paramilitary workers’ unit suppresses unrest and deters extremists.",
+    "cost": 8,
+    "effects": {
+      "stab": 4,
+      "fu": 3,
+      "ps": 1
+    }
+  },
+
+  {
+    "id": "port_modernization",
+    "name": "Modernize Singapore Harbour",
+    "text": "Massive investment boosts trade revenue and infrastructure.",
+    "cost": 12,
+    "effects": {
+      "budget": 8,
+      "leg": 2
+    }
+  },
+
+  {
+    "id": "education_reform",
+    "name": "Implement Education Reform",
+    "text": "New curriculum strengthens state ideology and national cohesion.",
+    "cost": 6,
+    "effects": {
+      "leg": 3,
+      "fu": 2
+    }
+  },
+
+  {
+    "id": "anti_opposition_sweep",
+    "name": "Conduct Anti-Opposition Sweep",
+    "text": "Crackdown on Trotskyites, Zionists, Ultrapopulists, and capitalist agitators.",
+    "cost": 5,
+    "effects": {
+      "stab": 5,
+      "leg": -2
+    }
+  },
+
+  {
+    "id": "cooperative_subsidy",
+    "name": "Subsidize Workers’ Cooperatives",
+    "text": "Strengthens NSSWP economic base and worker loyalty.",
+    "cost": 4,
+    "effects": {
+      "ps": 3,
+      "fu": 3,
+      "budget": -2
+    }
+  },
+
+  {
+    "id": "five_year_plan",
+    "name": "Introduce Five-Year Economic Plan",
+    "text": "Centralized economic planning boosts growth but strains bureaucracy.",
+    "cost": 8,
+    "effects": {
+      "budget": 5,
+      "os": 3,
+      "stab": -1
+    }
+  },
+
+  {
+    "id": "public_morale_campaign",
+    "name": "Launch Public Morale Campaign",
+    "text": "Media and cultural propaganda boost public support.",
+    "cost": 3,
+    "effects": {
+      "ps": 4,
+      "leg": 2
+    }
+  },
+
+  {
+    "id": "intelligence_bureau",
+    "name": "Strengthen State Intelligence Bureau",
+    "text": "Counteracts foreign influence and internal subversion.",
+    "cost": 6,
+    "effects": {
+      "stab": 3,
+      "fu": 2
+    }
+  },
+
+  {
+    "id": "commonwealth_diplomacy",
+    "name": "Diplomatic Mission to the TUC Commonwealth",
+    "text": "Mosley’s Socialist Commonwealth provides aid and legitimacy.",
+    "cost": 4,
+    "effects": {
+      "leg": 5,
+      "budget": 3
+    }
+  },
+
+  {
+    "id": "hsre_pact",
+    "name": "Sign Pact with Holy Soviet Rus Empire",
+    "text": "Economic-technological cooperation boosts industry.",
+    "cost": 7,
+    "effects": {
+      "budget": 6,
+      "os": 1
+    }
+  },
+
+  {
+    "id": "kmt_link",
+    "name": "Strengthen Links with KMT Singapore Faction",
+    "text": "Chinese socialist exiles support the NSSWP’s ideological project.",
+    "cost": 3,
+    "effects": {
+      "fu": 3,
+      "ps": 1
+    }
+  },
+
+  {
+    "id": "malaya_coordination",
+    "name": "Coordinate with PKMM in Malaya",
+    "text": "Regional left solidarity strengthens NSSWP legitimacy.",
+    "cost": 4,
+    "effects": {
+      "leg": 3,
+      "os": 2
+    }
+  },
+
+  {
+    "id": "police_professionalization",
+    "name": "Professionalize NSRS Police Service",
+    "text": "Trains a competent and politically loyal security force.",
+    "cost": 5,
+    "effects": {
+      "stab": 5
+    }
+  },
+
+  {
+    "id": "economic_subsidies",
+    "name": "Issue Strategic Economic Subsidies",
+    "text": "A short-term stabilizer that improves public morale.",
+    "cost": 6,
+    "effects": {
+      "ps": 4,
+      "stab": 3,
+      "budget": -6
+    }
+  }
+]
