@@ -28,6 +28,8 @@ function endTurn() {
     runOppositionAI();         // AI agitation system
     runCrisisChecks();         // Crisis penalties
     runBudgetCycle();          // NSRS monthly budget
+    runProjectTick();
+    runProjectTick();
     checkVictoryConditions();  // Win conditions
     checkDefeatConditions();   // Lose conditions
 
