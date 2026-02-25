@@ -1,55 +1,60 @@
-// ============================
-// CARD ENGINE
-// Draws and resolves cards
-// ============================
+// ============================================
+// CARD ENGINE — Draw 3 cards per turn.
+// Action cards are located in /data/cards/*.json
+// ============================================
 
-function drawCards() {
-    let container = document.getElementById("card-container");
-    container.innerHTML = "";
+let allCards = [];
 
-    // Select 3 cards: 1 party, 1 national, 1 advisor (if available)
-    let partyCard = randomFrom(gameState.decks.party);
-    let nationalCard = randomFrom(gameState.decks.national);
-    let advisorCard = randomFrom(gameState.decks.advisor);
-
-    let cards = [partyCard, nationalCard, advisorCard].filter(c => c);
-
-    cards.forEach(card => {
-        let el = document.createElement("div");
-        el.classList.add("card");
-        el.innerHTML = `
-            <h4>${card.name}</h4>
-            <p>${card.text}</p>
-        `;
-        el.addEventListener("click", () => resolveCard(card));
-        container.appendChild(el);
+function loadCards() {
+    // Load all card files
+    return Promise.all([
+        fetch("data/cards/government.json").then(r => r.json()),
+        fetch("data/cards/opposition.json").then(r => r.json())
+    ]).then(values => {
+        allCards = values.flat();
     });
 }
 
-function randomFrom(deck) {
-    if (!deck || deck.length === 0) return null;
-    return deck[Math.floor(Math.random() * deck.length)];
+function drawCards() {
+    const container = document.getElementById("card-container");
+    container.innerHTML = "";
+
+    // Pick 3 random cards
+    let choices = [];
+    for (let i = 0; i < 3; i++) {
+        choices.push(allCards[Math.floor(Math.random() * allCards.length)]);
+    }
+
+    choices.forEach(card => createCardElement(card));
 }
 
-// CARD RESOLUTION
-function resolveCard(card) {
-    logEvent(`Played: ${card.name}`);
+function createCardElement(card) {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<strong>${card.name}</strong><br>${card.text}<br><br><em>Cost: ${card.cost}</em>`;
 
-    // Apply stat effects
+    div.onclick = () => playCard(card);
+
+    document.getElementById("card-container").appendChild(div);
+}
+
+function playCard(card) {
+    // Check cost
+    if (gameState.stats.resources < card.cost) {
+        logEvent("Not enough resources!");
+        return;
+    }
+
+    // Apply cost
+    gameState.stats.resources -= card.cost;
+
+    // Apply card effects
     if (card.effects) {
-        Object.keys(card.effects).forEach(key => {
-            modifyStat(key, card.effects[key]);
-        });
+        for (let stat in card.effects) {
+            modifyStat(stat, card.effects[stat]);
+        }
     }
 
-    // Consume resources if required
-    if (card.cost) modifyResources(-card.cost);
-
-    // Apply events triggered by card
-    if (card.triggerEvent) {
-        triggerEvent(card.triggerEvent);
-    }
-
-    // Refresh card list
-    drawCards();
+    logEvent(`Played card: ${card.name}`);
+    updateStatsDisplay();
 }
