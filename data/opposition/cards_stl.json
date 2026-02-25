@@ -1,0 +1,32 @@
+[
+  {
+    "id": "stl_strike_call",
+    "name": "STL Calls for General Strike",
+    "text": "Trotskyite agitators call for a city-wide work stoppage.",
+    "effects": { "stab": -4, "fu": -2 }
+  },
+  {
+    "id": "stl_student_unrest",
+    "name": "Student Trotskyite Unrest",
+    "text": "University circles erupt with revolutionary rhetoric.",
+    "effects": { "stab": -2, "leg": -1 }
+  },
+  {
+    "id": "stl_factory_leaflets",
+    "name": "Factory Leaflet Campaign",
+    "text": "Trotskyite organizers distribute anti-NSSWP materials.",
+    "effects": { "ps": -2, "os": -1 }
+  },
+  {
+    "id": "stl_anti_nsswp_front",
+    "name": "Anti-NSSWP Workers’ Front",
+    "text": "STL forms an alternative workers' leadership.",
+    "effects": { "fu": -3 }
+  },
+  {
+    "id": "stl_hardline_manifesto",
+    "name": "Hardline Manifesto Published",
+    "text": "Calls for overthrow of NSRS spark unrest.",
+    "effects": { "stab": -3 }
+  }
+]
