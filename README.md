@@ -117,4 +117,3 @@ Free to modify, fork, and distribute.
 
 ## 👤 Created By
 Nate (Project Architect)  
-ChatGPT (Engine Developer)
