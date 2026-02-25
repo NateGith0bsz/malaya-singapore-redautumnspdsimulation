@@ -2,11 +2,11 @@
   {
     "id": "nsswp",
     "name": "National Socialist Singaporean Workers' Party",
-    "role": "ruling"
+    "role": "ruling_post1953"
   },
   {
     "id": "labour_front",
-    "name": "Labour Front",
+    "name": "Labour Front (to become NSSWP in 1953)",
     "role": "party"
   },
   {
