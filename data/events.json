@@ -25,5 +25,14 @@
       "budget": 25,
       "leg": 10
     }
+  },
+  {
+    "id": "lf_to_nsswp",
+    "turn": 73,
+    "name": "Reconstitution of the Labour Front into the NSSWP",
+    "effects": {
+      "leg": 5,
+      "fu": 5
+    }
   }
 ]
