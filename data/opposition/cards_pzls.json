@@ -1,0 +1,26 @@
+[
+  {
+    "id": "pzls_media_campaign",
+    "name": "Zionist Press Campaign",
+    "text": "Foreign-backed media outlets undermine NSSWP legitimacy.",
+    "effects": { "leg": -3 }
+  },
+  {
+    "id": "pzls_foreign_links",
+    "name": "Foreign Zionist Funding Exposed",
+    "text": "Revelations cause distrust within the population.",
+    "effects": { "stab": -2 }
+  },
+  {
+    "id": "pzls_community_division",
+    "name": "Community Division Efforts",
+    "text": "Attempts to split civic groups weaken unity.",
+    "effects": { "fu": -2 }
+  },
+  {
+    "id": "pzls_student_front",
+    "name": "Student Zionist Front Emerges",
+    "text": "Campus debate erupts over NSSWP foreign policy.",
+    "effects": { "ps": -1, "leg": -1 }
+  }
+]
