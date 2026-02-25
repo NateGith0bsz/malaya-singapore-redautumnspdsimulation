@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": "umno_agitation",
+    "name": "UMNO Agitation",
+    "text": "UMNO provokes communal tensions.",
+    "effects": {
+      "stab": -3,
+      "leg": -2
+    }
+  },
+  {
+    "id": "strike_wave",
+    "name": "General Strike Wave",
+    "text": "Workers protest across the colony.",
+    "effects": {
+      "ps": 2,
+      "os": 3,
+      "stab": -4
+    }
+  },
+  {
+    "id": "british_warning",
+    "name": "British Warning",
+    "text": "The Colonial Office threatens sanctions.",
+    "effects": {
+      "leg": -3
+    }
+  },
+  {
+    "id": "economic_slump",
+    "name": "Economic Slump",
+    "text": "Port trade declines sharply.",
+    "effects": {
+      "resources": -5,
+      "stab": -2
+    }
+  },
+  {
+    "id": "racial_tensions",
+    "name": "Racial Tensions Rise",
+    "text": "Communalism intensifies across the region.",
+    "effects": {
+      "stab": -5
+    }
+  }
+]
