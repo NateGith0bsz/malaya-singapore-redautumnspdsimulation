@@ -1,43 +1,34 @@
-// ============================
-// EVENT ENGINE
-// Handles major scripted events
-// ============================
+// ============================================
+// EVENT ENGINE — Timeline events trigger on exact turns.
+// Events are located in /data/events.json
+// ============================================
 
-function logEvent(text) {
-    let log = document.getElementById("log-content");
-    let div = document.createElement("div");
-    div.innerText = text;
-    log.appendChild(div);
-    log.scrollTop = log.scrollHeight;
+let cachedEvents = null;
+
+function loadEvents() {
+    return fetch("data/events.json")
+        .then(r => r.json())
+        .then(json => cachedEvents = json);
 }
 
 function processEventsForTurn() {
-    let turnEvents = gameState.events.filter(ev => ev.turn === gameState.turn);
+    if (!cachedEvents) return;
 
-    turnEvents.forEach(ev => {
-        logEvent(`EVENT: ${ev.name}`);
+    cachedEvents.forEach(evt => {
 
-        if (ev.effects) {
-            Object.keys(ev.effects).forEach(key => {
-                modifyStat(key, ev.effects[key]);
-            });
-        }
+        if (evt.turn === gameState.turn) {
 
-        if (ev.trigger) {
-            triggerEvent(ev.trigger);
+            // Prevent double-trigger
+            if (!preventDuplicateEvents(evt.id)) return;
+
+            logEvent(`EVENT: ${evt.name}`);
+
+            // Apply stat effects
+            if (evt.effects) {
+                for (let stat in evt.effects) {
+                    modifyStat(stat, evt.effects[stat]);
+                }
+            }
         }
     });
-}
-
-function triggerEvent(eventId) {
-    let ev = gameState.events.find(x => x.id === eventId);
-    if (!ev) return;
-
-    logEvent(`EVENT TRIGGERED: ${ev.name}`);
-
-    if (ev.effects) {
-        Object.keys(ev.effects).forEach(key => {
-            modifyStat(key, ev.effects[key]);
-        });
-    }
 }
