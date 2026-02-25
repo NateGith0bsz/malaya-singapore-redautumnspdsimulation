@@ -15,6 +15,11 @@
         <h2>The Struggle Before the Republic</h2>
     </header>
 
+    <!-- ★ NEW (PART 12) — NSSWP BANNER -->
+    <div id="nsswp-banner" class="banner" style="display:none;">
+        <strong>NSSWP GOVERNMENT ACTIVE (1953+)</strong>
+    </div>
+
     <!-- STATS PANEL -->
     <section id="stats-panel">
         <div class="stat">PS: <span id="stat-ps">50</span></div>
@@ -29,9 +34,33 @@
         <div class="stat">MONTH: <span id="stat-turn">January 1947</span></div>
     </section>
 
+    <!-- ★ NEW (PART 12) — PROJECT STATUS BOX -->
+    <div id="project-box" class="ui-box" style="display:none;">
+        <h3>Active Project</h3>
+        <div id="project-name"></div>
+        <div id="project-progress"></div>
+    </div>
+
+    <!-- ★ NEW (PART 12) — CRISIS WARNING -->
+    <div id="crisis-warning" class="warning-box" style="display:none;">
+        ⚠️ CRISIS: Stability or Legitimacy Critically Low
+    </div>
+
+    <!-- ★ NEW (PART 12) — OPPOSITION HEAT METER -->
+    <div id="opposition-heat" class="ui-box">
+        <h3>Opposition Heat</h3>
+        <div id="heat-value">0%</div>
+    </div>
+
     <!-- ADVISORS -->
     <section id="advisors-panel">
         <h3>Your Advisors</h3>
+
+        <!-- ★ NEW (PART 12) — ADVISOR CABINET BOX -->
+        <div id="advisor-box" class="ui-box">
+            <div id="advisor-list"></div>
+        </div>
+
         <div id="advisor-slots"></div>
     </section>
 
@@ -68,10 +97,15 @@
 
 </div>
 
+<!-- ENGINE FILES -->
 <script src="engine/turnEngine.js"></script>
 <script src="engine/cardEngine.js"></script>
 <script src="engine/statsEngine.js"></script>
 <script src="engine/eventEngine.js"></script>
+
+<!-- ★ NEW (PART 12) — UI ENGINE -->
+<script src="engine/uiEngine.js"></script>
+
 <script src="game.js"></script>
 
 </body>
