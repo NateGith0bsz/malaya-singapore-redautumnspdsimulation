@@ -1,1 +1,73 @@
-[]
+[
+  {
+    "id": "lky",
+    "name": "Lee Kuan Yew",
+    "text": "Legal strategist. Strengthens legitimacy and stabilizes crises.",
+    "effects": {
+      "leg": 3,
+      "stab": 1
+    }
+  },
+  {
+    "id": "lim_chin_siong",
+    "name": "Lim Chin Siong",
+    "text": "Mass mobilizer. Boosts worker activism and street strength.",
+    "effects": {
+      "ps": 3,
+      "os": 3
+    }
+  },
+  {
+    "id": "marshall",
+    "name": "David Marshall",
+    "text": "Fiery orator. Wins public support but risks instability.",
+    "effects": {
+      "ps": 4,
+      "stab": -1
+    }
+  },
+  {
+    "id": "fong_swee_suan",
+    "name": "Fong Swee Suan",
+    "text": "Union organizer. Strengthens worker discipline and party cohesion.",
+    "effects": {
+      "os": 2,
+      "fu": 1
+    }
+  },
+  {
+    "id": "goh_keng_swee",
+    "name": "Goh Keng Swee",
+    "text": "Technocratic planner. Improves resource management.",
+    "effects": {
+      "resources": 5
+    }
+  },
+  {
+    "id": "chin_peng",
+    "name": "Chin Peng",
+    "text": "United-Front architect. Helps unite Chinese left groups.",
+    "effects": {
+      "os": 2,
+      "fu": 2
+    }
+  },
+  {
+    "id": "onn_jaafar",
+    "name": "Onn Jaafar",
+    "text": "Moderate Malay bridge-builder. Reduces ethnic tensions.",
+    "effects": {
+      "leg": 2,
+      "stab": 2
+    }
+  },
+  {
+    "id": "yusof_ishak",
+    "name": "Yusof Ishak",
+    "text": "Symbol of unity. Boosts legitimacy and national stability.",
+    "effects": {
+      "leg": 4,
+      "stab": 3
+    }
+  }
+]
