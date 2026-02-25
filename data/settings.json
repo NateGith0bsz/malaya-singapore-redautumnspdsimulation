@@ -1,1 +1,11 @@
-[]
+{
+  "startYear": 1947,
+  "startPS": 50,
+  "startOS": 50,
+  "startLEG": 50,
+  "startSTAB": 50,
+  "startFU": 50,
+  "startResources": 30,
+  "startBudget": 50,
+  "sandbox": true
+}
