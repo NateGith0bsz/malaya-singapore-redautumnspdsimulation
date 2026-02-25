@@ -1,3 +1,7 @@
+// ============================================
+// UI ENGINE — Updates project box, crisis warnings, etc.
+// ============================================
+
 function updateProjectUI() {
     const box = document.getElementById("project-box");
 
@@ -8,33 +12,24 @@ function updateProjectUI() {
 
     box.style.display = "block";
     document.getElementById("project-name").innerText =
-        `Project: ${gameState.activeProject.id}`;
-
+        gameState.activeProject.id;
     document.getElementById("project-progress").innerText =
-        `Turns Remaining: ${gameState.activeProject.ticksRemaining}`;
+        `Turns Left: ${gameState.activeProject.ticksRemaining}`;
 }
 
 function updateCrisisUI() {
     const warn = document.getElementById("crisis-warning");
-    if (gameState.stats.stab < 25 || gameState.stats.leg < 20) {
-        warn.style.display = "block";
-    } else {
-        warn.style.display = "none";
-    }
+    warn.style.display =
+        (gameState.stats.stab < 25 || gameState.stats.leg < 20)
+        ? "block" : "none";
 }
 
 function updateOppositionHeatUI() {
     const heat = document.getElementById("heat-value");
-
-    let hostilityScore = 0;
-    oppositionFactions.forEach(f => {
-        if (gameState.turn >= f.turn) hostilityScore += f.hostility * 100;
-    });
-
-    heat.innerText = `${Math.floor(hostilityScore)}%`;
+    heat.innerText = `${gameState.oppositionDanger || 0}%`;
 }
 
 function updateNSSWPBanner() {
     const banner = document.getElementById("nsswp-banner");
-    if (gameState.turn >= 73) banner.style.display = "block";
+    banner.style.display = (gameState.turn >= 73) ? "block" : "none";
 }
