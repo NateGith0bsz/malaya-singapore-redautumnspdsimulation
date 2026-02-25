@@ -1,6 +1,107 @@
 [
   {
-    "id": "umno_1951",
+    "id": "lf_formation_1947",
+    "turn": 1,
+    "name": "Formation of the Labour Front (1947)",
+    "effects": {
+      "leg": 5,
+      "fu": 3
+    }
+  },
+
+  {
+    "id": "kmt_exiles_singapore",
+    "turn": 3,
+    "name": "Arrival of KMT Left-Wing Exiles in Singapore",
+    "effects": {
+      "ps": 2,
+      "fu": 1
+    }
+  },
+
+  {
+    "id": "pkmm_growth_1948",
+    "turn": 12,
+    "name": "PKMM Expands Across Malaya",
+    "effects": {
+      "os": 3,
+      "ps": 2
+    }
+  },
+
+  {
+    "id": "umno_youth_rises",
+    "turn": 18,
+    "name": "UMNO Youth Rises (1948)",
+    "effects": {
+      "stab": -3,
+      "leg": -2
+    }
+  },
+
+  {
+    "id": "mca_radicalization",
+    "turn": 22,
+    "name": "MCA Radicalization Under Chin Peng",
+    "effects": {
+      "fu": 2,
+      "os": 2
+    }
+  },
+
+  {
+    "id": "mca_pkmm_merger",
+    "turn": 28,
+    "name": "MCA Merges into PKMM (1949)",
+    "effects": {
+      "ps": 4,
+      "os": 3,
+      "fu": 3
+    }
+  },
+
+  {
+    "id": "umno_escalation_1950",
+    "turn": 36,
+    "name": "UMNO Escalates Communal Tensions (1950)",
+    "effects": {
+      "stab": -7,
+      "leg": -3
+    }
+  },
+
+  {
+    "id": "british_threat_1950",
+    "turn": 38,
+    "name": "British Colonial Office Issues Warning",
+    "effects": {
+      "leg": -3
+    }
+  },
+
+  {
+    "id": "general_strikes_1950",
+    "turn": 40,
+    "name": "General Strikes Sweep Singapore",
+    "effects": {
+      "ps": 3,
+      "os": 4,
+      "stab": -4
+    }
+  },
+
+  {
+    "id": "umno_coup_warning",
+    "turn": 46,
+    "name": "Signs of UMNO Coup Preparations",
+    "effects": {
+      "stab": -5,
+      "leg": -2
+    }
+  },
+
+  {
+    "id": "umno_1951_coup_attempt",
     "turn": 48,
     "name": "UMNO Coup Attempt (1951)",
     "effects": {
@@ -8,6 +109,27 @@
       "leg": -5
     }
   },
+
+  {
+    "id": "post_coup_reconstruction",
+    "turn": 52,
+    "name": "Post-Coup Reconstruction (1952)",
+    "effects": {
+      "leg": 5,
+      "stab": 5,
+      "fu": 3
+    }
+  },
+
+  {
+    "id": "independence_negotiations",
+    "turn": 60,
+    "name": "Start of Independence Negotiations (1952)",
+    "effects": {
+      "leg": 5
+    }
+  },
+
   {
     "id": "independence_1953",
     "turn": 72,
@@ -17,15 +139,17 @@
       "stab": 10
     }
   },
+
   {
     "id": "nsrs_foundation",
     "turn": 73,
-    "name": "Formation of the NSRS Government",
+    "name": "Formation of the National Socialist Republic of Singapore",
     "effects": {
       "budget": 25,
       "leg": 10
     }
   },
+
   {
     "id": "lf_to_nsswp",
     "turn": 73,
@@ -33,6 +157,94 @@
     "effects": {
       "leg": 5,
       "fu": 5
+    }
+  },
+
+  {
+    "id": "budget_activation",
+    "turn": 74,
+    "name": "NSRS Budget Activated",
+    "effects": {
+      "budget": 10,
+      "leg": 2
+    }
+  },
+
+  {
+    "id": "zionist_league_emerges",
+    "turn": 80,
+    "name": "Emergence of the Singapore Zionist League",
+    "effects": {
+      "leg": -1
+    }
+  },
+
+  {
+    "id": "trotskyite_cells_form",
+    "turn": 82,
+    "name": "Trotskyite Cells Form in University Circles",
+    "effects": {
+      "stab": -2,
+      "fu": -1
+    }
+  },
+
+  {
+    "id": "left_communists_agitate",
+    "turn": 85,
+    "name": "Left-Communist Council Agitators Emerge",
+    "effects": {
+      "stab": -3
+    }
+  },
+
+  {
+    "id": "ultrapopulist_movement",
+    "turn": 88,
+    "name": "Ultrapopulist People's Action Caucus Mobilizes",
+    "effects": {
+      "ps": -2,
+      "stab": -3
+    }
+  },
+
+  {
+    "id": "capitalist_chamber_presses",
+    "turn": 92,
+    "name": "Singapore Commercial Chamber Pressures NSSWP",
+    "effects": {
+      "leg": -2,
+      "budget": -3
+    }
+  },
+
+  {
+    "id": "nsswp_cabinet_consolidation",
+    "turn": 95,
+    "name": "NSSWP Cabinet Consolidates Power",
+    "effects": {
+      "leg": 4,
+      "fu": 3
+    }
+  },
+
+  {
+    "id": "regional_tensions_rise",
+    "turn": 100,
+    "name": "Regional Tensions Rise in Southeast Asia",
+    "effects": {
+      "stab": -3
+    }
+  },
+
+  {
+    "id": "nsrs_high_growth_phase",
+    "turn": 110,
+    "name": "NSRS Economic High Growth Phase",
+    "effects": {
+      "budget": 12,
+      "leg": 6,
+      "ps": 4
     }
   }
 ]
