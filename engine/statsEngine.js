@@ -1,40 +1,42 @@
-// ============================
-// STAT ENGINE
-// Handles all stat changes
-// ============================
+// ============================================
+// STATS ENGINE — Handles stat changes.
+// stats: ps, os, leg, stab, fu, resources, budget
+// ============================================
 
-function updateStatsDisplay() {
-    document.getElementById("stat-ps").innerText = gameState.stats.ps;
-    document.getElementById("stat-os").innerText = gameState.stats.os;
-    document.getElementById("stat-leg").innerText = gameState.stats.leg;
-    document.getElementById("stat-stab").innerText = gameState.stats.stab;
-    document.getElementById("stat-fu").innerText = gameState.stats.fu;
-    document.getElementById("stat-resources").innerText = gameState.stats.resources;
-
-    // Budget only appears after 1953
-    if (gameState.year >= 1953) {
-        document.getElementById("budget-container").style.display = "block";
-        document.getElementById("stat-budget").innerText = gameState.stats.budget;
-    }
+if (!gameState.stats) {
+    gameState.stats = {
+        ps: 50,
+        os: 50,
+        leg: 50,
+        stab: 50,
+        fu: 50,
+        resources: 30,
+        budget: 0
+    };
 }
 
-// Generic stat modification
 function modifyStat(stat, amount) {
+    if (typeof gameState.stats[stat] === "undefined") return;
+
     gameState.stats[stat] += amount;
 
-    // Prevent negative collapse
-    if (gameState.stats[stat] < 0) gameState.stats[stat] = 0;
+    logEvent(`${stat.toUpperCase()} changed by ${amount}.`);
 
-    // Hard cap at 999 for sanity
-    if (gameState.stats[stat] > 999) gameState.stats[stat] = 999;
+    // Safety clamp & checks
+    runBalancePass();
 
     updateStatsDisplay();
 }
 
-function modifyResources(amount) {
-    modifyStat("resources", amount);
-}
+function updateStatsDisplay() {
+    for (let key in gameState.stats) {
+        const el = document.getElementById(`stat-${key}`);
+        if (el) el.innerText = gameState.stats[key];
+    }
 
-function modifyBudget(amount) {
-    modifyStat("budget", amount);
+    // Budget only visible after 1953
+    const budgetBox = document.getElementById("budget-container");
+    if (gameState.turn >= 73) {
+        budgetBox.style.display = "inline-block";
+    }
 }
