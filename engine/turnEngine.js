@@ -1,21 +1,18 @@
 // ============================================
-// TURN ENGINE
-// Handles month progression, year progression,
-// event processing, card drawing, and integration
-// with all other engine systems.
+// TURN ENGINE — Complete Final Version
+// Handles time progression, card refresh,
+// events, budgets, AI, crises, projects, UI.
 // ============================================
 
-// Ensure gameState exists
 if (typeof gameState === "undefined") {
     var gameState = {};
 }
 
-// Initialize defaults if missing
-gameState.monthIndex = gameState.monthIndex || 0;
-gameState.year = gameState.year || 1947;
-gameState.turn = gameState.turn || 1;
+// Initialize defaults if not present
+gameState.monthIndex = gameState.monthIndex ?? 0;
+gameState.year       = gameState.year ?? 1947;
+gameState.turn       = gameState.turn ?? 1;
 
-// Month names for display
 gameState.months = [
     "January", "February", "March",
     "April", "May", "June",
@@ -29,65 +26,61 @@ gameState.months = [
 
 function endTurn() {
 
-    // --------------------------------------------
-    // Advance month & year
-    // --------------------------------------------
+    // → Advance month & year
     gameState.monthIndex++;
-
     if (gameState.monthIndex >= 12) {
         gameState.monthIndex = 0;
         gameState.year++;
     }
 
+    // Increase turn counter
     gameState.turn++;
 
-    // --------------------------------------------
-    // Update date display
-    // --------------------------------------------
+    // → Update date display
     document.getElementById("stat-turn").innerText =
         `${gameState.months[gameState.monthIndex]} ${gameState.year}`;
 
-    // --------------------------------------------
-    // Process timeline events
-    // --------------------------------------------
+    // → Execute scheduled events (timeline)
     processEventsForTurn();
 
-    // --------------------------------------------
-    // Draw new cards
-    // --------------------------------------------
+    // → Draw new cards
     drawCards();
 
-    // --------------------------------------------
-    // Update stat UI
-    // --------------------------------------------
+    // → Update stat display
     updateStatsDisplay();
 
     // ============================================
-    // ⭐⭐ NEW ENGINE SYSTEMS ⭐⭐ (Part 6 & 11)
+    // CORE GAME SYSTEMS
     // ============================================
 
-    checkForTransformation();  // Labour Front → NSSWP
-    runOppositionAI();         // AI agitation system
-    runCrisisChecks();         // Stability/legitimacy decay
-    runBudgetCycle();          // NSRS economy engine
-    runProjectTick();          // Multi-turn megaprojects
+    checkForTransformation();   // Labour Front → NSSWP
+    runOppositionAI();          // Opposition sabotage
+    runCrisisChecks();          // Critical conditions
+    runBudgetCycle();           // NSRS monthly economy
+    runProjectTick();           // Government megaprojects
 
-    // --------------------------------------------
-    // Win / Lose Conditions
-    // --------------------------------------------
-    checkVictoryConditions();
-    checkDefeatConditions();
+    // ============================================
+    // WIN / LOSS CHECKS
+    // ============================================
 
-    // --------------------------------------------
-    // UI Updates (Part 12)
-    // --------------------------------------------
+    if (victorySanityCheck()) {
+        checkVictoryConditions();
+        checkDefeatConditions();
+    }
+
+    // ============================================
+    // UI Updates
+    // ============================================
+
     updateProjectUI();
     updateCrisisUI();
     updateOppositionHeatUI();
     updateNSSWPBanner();
 
-    // --------------------------------------------
-    // Logging
-    // --------------------------------------------
+    // ============================================
+    // FINAL SAFETY PASS
+    // ============================================
+    runBalancePass();
+
     logEvent(`Turn ${gameState.turn} completed.`);
 }
