@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": "umno_1951",
+    "turn": 48,
+    "name": "UMNO Coup Attempt (1951)",
+    "effects": {
+      "stab": -10,
+      "leg": -5
+    }
+  },
+  {
+    "id": "independence_1953",
+    "turn": 72,
+    "name": "Singapore Independence (1953)",
+    "effects": {
+      "leg": 10,
+      "stab": 10
+    }
+  },
+  {
+    "id": "nsrs_foundation",
+    "turn": 73,
+    "name": "Formation of the NSRS Government",
+    "effects": {
+      "budget": 25,
+      "leg": 10
+    }
+  }
+]
