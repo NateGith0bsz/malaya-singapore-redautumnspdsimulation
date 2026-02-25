@@ -1,0 +1,26 @@
+[
+  {
+    "id": "upac_street_protest",
+    "name": "UPAC Street Protest Mobilized",
+    "text": "Populist mobs take to the streets demanding reforms.",
+    "effects": { "stab": -4, "ps": -2 }
+  },
+  {
+    "id": "upac_radio_demagogy",
+    "name": "Demagogues Dominate Radio",
+    "text": "Sensational broadcasts sway public opinion.",
+    "effects": { "ps": -3 }
+  },
+  {
+    "id": "upac_nationalist_rhetoric",
+    "name": "Hyper-Nationalist Rhetoric",
+    "text": "Populist leaders accuse NSSWP of being foreign puppets.",
+    "effects": { "leg": -2 }
+  },
+  {
+    "id": "upac_corruption_accusations",
+    "name": "Accusations of NSSWP Corruption",
+    "text": "Public trust erodes rapidly.",
+    "effects": { "leg": -3 }
+  }
+]
