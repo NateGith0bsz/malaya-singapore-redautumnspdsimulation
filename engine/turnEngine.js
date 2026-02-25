@@ -23,13 +23,12 @@ function endTurn() {
     // Update stats display
     updateStatsDisplay();
 
-    // ⭐⭐ NEW ENGINE SYSTEMS (THIS IS THE FINAL STEP) ⭐⭐
+    // ⭐⭐ NEW ENGINE SYSTEMS ⭐⭐
     checkForTransformation();  // Labour Front → NSSWP
     runOppositionAI();         // AI agitation system
     runCrisisChecks();         // Crisis penalties
     runBudgetCycle();          // NSRS monthly budget
-    runProjectTick();
-    runProjectTick();
+    runProjectTick();          // PROJECT TICK (ONLY ONCE!)
     checkVictoryConditions();  // Win conditions
     checkDefeatConditions();   // Lose conditions
 
