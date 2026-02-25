@@ -1,0 +1,89 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#stats-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 18px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: #222;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+#card-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 220px;
+    background: #1c1c1c;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #2a2a2a;
+}
+
+#log-panel {
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+#end-turn-btn, #sandbox-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#sandbox-menu {
+    background: #222;
+    padding: 15px;
+    margin: 15px auto;
+    width: 300px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.sandbox-btn {
+    display: block;
+    width: 90%;
+    margin: 8px auto;
+    padding: 8px;
+    font-size: 16px;
+}
