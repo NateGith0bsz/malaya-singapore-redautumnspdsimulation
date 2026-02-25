@@ -1,62 +1,83 @@
-let gameState = {
-    turn: 1,
-    year: 1947,
-    monthIndex: 0,
-    months: [
-        "January","February","March","April","May","June",
-        "July","August","September","October","November","December"
-    ],
+// ======================================================
+// GAME BOOTSTRAP (FINAL VERSION)
+// Loads events, cards, initializes UI, and starts game.
+// ======================================================
 
-    stats: {
-        ps: 50,
-        os: 50,
-        leg: 50,
-        stab: 50,
-        fu: 50,
-        resources: 30,
-        budget: 50
-    },
+// Initialize the base game state container if not present
+if (typeof gameState === "undefined") {
+    var gameState = {};
+}
 
-    advisors: [],
-    decks: {
-        party: [],
-        national: [],
-        advisor: []
-    },
-    events: []
-};
+// Basic defaults (only used on first load)
+gameState.turn       = gameState.turn ?? 1;
+gameState.year       = gameState.year ?? 1947;
+gameState.monthIndex = gameState.monthIndex ?? 0;
 
-// LOAD GAME DATA
+gameState.months = [
+    "January","February","March","April","May","June",
+    "July","August","September","October","November","December"
+];
+
+// This will be filled by statsEngine.js if not present
+gameState.stats = gameState.stats || {};
+
+
+// ======================================================
+// LOAD ALL GAME DATA
+// ======================================================
+
 async function loadGameData() {
     try {
-        gameState.decks.party = await fetch("data/cards_party.json").then(r => r.json());
-        gameState.decks.national = await fetch("data/cards_national.json").then(r => r.json());
-        gameState.decks.advisor = await fetch("data/cards_advisor.json").then(r => r.json());
-        gameState.events = await fetch("data/events.json").then(r => r.json());
+        // Timeline events
+        await loadEvents();
+
+        // Card decks
+        await loadCards();
+
+        logEvent("Game data loaded.");
+
+        // Render UI after everything is loaded
+        drawCards();
+        updateStatsDisplay();
+        renderTurnDate();
+
     } catch (err) {
-        console.error("Error loading data:", err);
+        console.error("Error loading game data:", err);
     }
-
-    renderTurn();
 }
 
-// RENDER TURN DATE
-function renderTurn() {
-    document.getElementById("stat-turn").innerText =
-        `${gameState.months[gameState.monthIndex]} ${gameState.year}`;
 
-    drawCards();
+// ======================================================
+// TURN DATE RENDERER
+// ======================================================
+
+function renderTurnDate() {
+    const turnText = `${gameState.months[gameState.monthIndex]} ${gameState.year}`;
+    document.getElementById("stat-turn").innerText = turnText;
 }
+
+
+// ======================================================
+// UI BUTTON HOOKS
+// ======================================================
 
 // END TURN BUTTON
-document.getElementById("end-turn-btn").addEventListener("click", () => {
+document.getElementById("end-turn-btn").onclick = () => {
     endTurn();
-});
+};
 
-// SANDBOX MENU BUTTON
-document.getElementById("sandbox-btn").addEventListener("click", () => {
-    let menu = document.getElementById("sandbox-menu");
+// SANDBOX MENU OPEN/CLOSE
+document.getElementById("sandbox-btn").onclick = () => {
+    const menu = document.getElementById("sandbox-menu");
     menu.style.display = (menu.style.display === "none") ? "block" : "none";
-});
+};
 
-loadGameData();
+
+// ======================================================
+// BOOTSTRAP GAME START
+// ======================================================
+
+window.onload = () => {
+    logEvent("Loading game...");
+    loadGameData();
+};
