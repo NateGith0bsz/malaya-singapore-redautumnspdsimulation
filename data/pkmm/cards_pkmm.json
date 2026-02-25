@@ -1,0 +1,58 @@
+[
+  {
+    "id": "pkmm_mass_rally",
+    "name": "PKMM Mass Rally",
+    "text": "Tens of thousands rally behind the Malay Left.",
+    "cost": 3,
+    "effects": { "ps": 4, "os": 2 }
+  },
+  {
+    "id": "pkmm_youth_mobilization",
+    "name": "API Youth Mobilization",
+    "text": "Angkatan Pemuda Insaf organizes radical Malay youth.",
+    "cost": 2,
+    "effects": { "fu": 3, "ps": 1 }
+  },
+  {
+    "id": "pkmm_awan_network",
+    "name": "AWAS Women’s Organizing Network",
+    "text": "Women activists bolster PKMM’s organizational strength.",
+    "cost": 4,
+    "effects": { "os": 3, "ps": 2 }
+  },
+  {
+    "id": "pkmm_anti_umno_front",
+    "name": "Anti-UMNO Front Declaration",
+    "text": "PKMM positions itself as UMNO’s ideological challenger.",
+    "cost": 3,
+    "effects": { "leg": 2, "stab": -1 }
+  },
+  {
+    "id": "pkmm_demands_independence",
+    "name": "Demand Immediate Malayan Independence",
+    "text": "Raises nationalist legitimacy but increases tensions.",
+    "cost": 2,
+    "effects": { "leg": 4, "stab": -2 }
+  },
+  {
+    "id": "pkmm_unite_with_mca",
+    "name": "Negotiate PKMM–MCA Socialist Alliance",
+    "text": "Chinese–Malay socialist unity reshapes Malayan politics.",
+    "cost": 4,
+    "effects": { "fu": 3, "ps": 3, "leg": 2 }
+  },
+  {
+    "id": "pkmm_resistance_volunteers",
+    "name": "Form Resistance Volunteer Corps",
+    "text": "Militia units deter UMNO violence.",
+    "cost": 5,
+    "effects": { "stab": 3, "os": 2 }
+  },
+  {
+    "id": "pkmm_newspapers",
+    "name": "Launch Socialist Malay Newspaper",
+    "text": "Propaganda increases morale and grassroots reach.",
+    "cost": 3,
+    "effects": { "ps": 3, "fu": 1 }
+  }
+]
