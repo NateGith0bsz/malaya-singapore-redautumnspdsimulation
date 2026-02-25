@@ -1,0 +1,54 @@
+[
+  {
+    "id": "adv_burhanuddin_unity",
+    "name": "Burhanuddin al-Helmy – Malay Unity Campaign",
+    "text": "Strengthens multiracial socialist legitimacy.",
+    "effects": { "leg": 3, "ps": 2 },
+    "cost": 0
+  },
+  {
+    "id": "adv_burhanuddin_religious",
+    "name": "Burhanuddin – Islamic Socialist Outreach",
+    "text": "Bridges Islamic reformism with socialist nationalism.",
+    "effects": { "fu": 2, "ps": 1 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_ishak_melayu_raya",
+    "name": "Ishak Haji Muhammad – Melayu Raya Vision",
+    "text": "Pan-Malayan nationalism boosts PKMM momentum.",
+    "effects": { "os": 3, "leg": 2 },
+    "cost": 1
+  },
+  {
+    "id": "adv_ishak_press",
+    "name": "Ishak – Radical Press Campaign",
+    "text": "Malay press strengthens mass mobilization.",
+    "effects": { "ps": 4 },
+    "cost": 0
+  },
+
+  {
+    "id": "adv_chin_peng_organizing",
+    "name": "Chin Peng – Youth Organizing Drive",
+    "text": "Mass youth mobilization strengthens socialist unity.",
+    "effects": { "fu": 3, "os": 2 },
+    "cost": 0
+  },
+  {
+    "id": "adv_chin_peng_chinese_wing",
+    "name": "Chin Peng – Consolidate Chinese Wing",
+    "text": "MCA Reformist Wing becomes fully integrated.",
+    "effects": { "ps": 3, "fu": 3 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_dw_jacob",
+    "name": "KMM Veteran – Anti-UMNO Strategy",
+    "text": "Strategic sabotage of UMNO maneuvers.",
+    "effects": { "stab": 2, "leg": 2 },
+    "cost": 1
+  }
+]
