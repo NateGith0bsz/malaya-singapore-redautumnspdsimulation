@@ -1,0 +1,88 @@
+[
+  {
+    "id": "proj_housing_phase1",
+    "name": "National Housing Board – Phase I",
+    "duration": 6,
+    "start_cost": 10,
+    "tick_cost": 4,
+    "completion_effects": {
+      "stab": 10,
+      "leg": 6,
+      "ps": 5
+    }
+  },
+
+  {
+    "id": "proj_port_modernization",
+    "name": "Port Modernization Program",
+    "duration": 5,
+    "start_cost": 12,
+    "tick_cost": 3,
+    "completion_effects": {
+      "budget": 15,
+      "leg": 4
+    }
+  },
+
+  {
+    "id": "proj_five_year_plan",
+    "name": "Five-Year Economic Plan",
+    "duration": 8,
+    "start_cost": 8,
+    "tick_cost": 5,
+    "completion_effects": {
+      "budget": 20,
+      "os": 5,
+      "leg": 3
+    }
+  },
+
+  {
+    "id": "proj_workers_guard",
+    "name": "Workers’ Security Guard Expansion",
+    "duration": 4,
+    "start_cost": 6,
+    "tick_cost": 2,
+    "completion_effects": {
+      "stab": 8,
+      "fu": 4
+    }
+  },
+
+  {
+    "id": "proj_science_council",
+    "name": "National Science Council",
+    "duration": 5,
+    "start_cost": 7,
+    "tick_cost": 3,
+    "completion_effects": {
+      "leg": 5,
+      "os": 3
+    }
+  },
+
+  {
+    "id": "proj_industrial_base",
+    "name": "Singapore Industrial Base Initiative",
+    "duration": 6,
+    "start_cost": 9,
+    "tick_cost": 4,
+    "completion_effects": {
+      "budget": 12,
+      "stab": 3,
+      "leg": 2
+    }
+  },
+
+  {
+    "id": "proj_media_consolidation",
+    "name": "NSRS Media Consolidation Plan",
+    "duration": 3,
+    "start_cost": 5,
+    "tick_cost": 1,
+    "completion_effects": {
+      "ps": 5,
+      "leg": 4
+    }
+  }
+]
