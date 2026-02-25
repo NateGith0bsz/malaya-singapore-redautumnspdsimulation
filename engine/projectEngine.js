@@ -1,52 +1,57 @@
-// =======================================
-// PROJECT ENGINE
-// Multi-turn mega-projects
-// =======================================
+// ============================================
+// PROJECT ENGINE — Multi-turn NSRS megaprojects
+// Located in data/projects.json
+// ============================================
 
 function startProject(projectId) {
     if (gameState.activeProject) {
-        logEvent("A project is already active!");
+        logEvent("A project is already underway.");
         return;
     }
 
-    fetch(`data/projects.json`)
+    fetch("data/projects.json")
         .then(r => r.json())
         .then(projects => {
             const proj = projects.find(p => p.id === projectId);
             if (!proj) return;
 
-            // Check starting cost
+            // Check start cost
             if (gameState.stats.budget < proj.start_cost) {
-                logEvent("Not enough budget to start this project.");
+                logEvent("Not enough budget to launch project.");
                 return;
             }
 
             gameState.stats.budget -= proj.start_cost;
+
             gameState.activeProject = {
                 id: proj.id,
                 ticksRemaining: proj.duration
             };
 
-            logEvent(`${proj.name} has started. Duration: ${proj.duration} turns.`);
+            logEvent(`${proj.name} has begun.`);
         });
 }
 
 function runProjectTick() {
     if (!gameState.activeProject) return;
 
-    fetch(`data/projects.json`)
+    fetch("data/projects.json")
         .then(r => r.json())
         .then(projects => {
             const proj = projects.find(p => p.id === gameState.activeProject.id);
+
             if (!proj) return;
 
-            // Pay tick cost
+            // Prevent negative budget crash
+            if (!projectSafetyCheck()) return;
+
+            // Tick cost
             gameState.stats.budget -= proj.tick_cost;
             gameState.activeProject.ticksRemaining--;
 
-            logEvent(`Project Tick: ${proj.name} consumes ${proj.tick_cost} Budget.`);
+            logEvent(`Project Tick: ${proj.name} uses ${proj.tick_cost} budget.`);
 
-            // Complete project
+            // Completion
             if (gameState.activeProject.ticksRemaining <= 0) {
                 completeProject(proj);
             }
@@ -54,12 +59,11 @@ function runProjectTick() {
 }
 
 function completeProject(project) {
-    logEvent(`${project.name} has been completed!`);
+    logEvent(`${project.name} completed!`);
 
-    // Apply completion effects
-    Object.keys(project.completion_effects).forEach(stat => {
+    for (let stat in project.completion_effects) {
         modifyStat(stat, project.completion_effects[stat]);
-    });
+    }
 
     gameState.activeProject = null;
 }
