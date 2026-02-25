@@ -1,0 +1,76 @@
+[
+  {
+    "id": "adv_lky_modernization",
+    "name": "Lee Kuan Yew – Modernization Blueprint",
+    "text": "LKY pushes for aggressive modernization and state-building.",
+    "effects": { "leg": 3, "budget": 3, "stab": 1 },
+    "cost": 0
+  },
+  {
+    "id": "adv_lky_ruleoflaw",
+    "name": "Lee Kuan Yew – Rule of Law Campaign",
+    "text": "Strengthening institutions boosts legitimacy.",
+    "effects": { "leg": 4, "stab": 2 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_lcs_workers_mobilization",
+    "name": "Lim Chin Siong – Workers’ Mobilization",
+    "text": "The working class rallies to support the NSSWP.",
+    "effects": { "ps": 4, "fu": 3 },
+    "cost": 0
+  },
+  {
+    "id": "adv_lcs_solidarity",
+    "name": "Lim Chin Siong – Labour Solidarity Campaign",
+    "text": "Strengthens union loyalty to the government.",
+    "effects": { "stab": 2, "fu": 3 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_gks_technocratic",
+    "name": "Goh Keng Swee – Technocratic Overhaul",
+    "text": "Technocratic governance boosts efficiency and stability.",
+    "effects": { "budget": 4, "stab": 3 },
+    "cost": 1
+  },
+  {
+    "id": "adv_gks_econstudy",
+    "name": "Goh Keng Swee – Economic Studies Board",
+    "text": "A new economic bureau improves long-term finances.",
+    "effects": { "budget": 5 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_raj_foreignpolicy",
+    "name": "S. Rajaratnam – Foreign Policy Maneuver",
+    "text": "Diplomatic brilliance boosts legitimacy abroad.",
+    "effects": { "leg": 5, "budget": 2 },
+    "cost": 1
+  },
+  {
+    "id": "adv_raj_media",
+    "name": "S. Rajaratnam – National Media Network",
+    "text": "Controls narrative and stabilizes society.",
+    "effects": { "ps": 3, "stab": 2 },
+    "cost": 1
+  },
+
+  {
+    "id": "adv_to_cc_education",
+    "name": "Toh Chin Chye – Education Overhaul",
+    "text": "Strengthens national ideology and discipline.",
+    "effects": { "fu": 3, "leg": 2 },
+    "cost": 1
+  },
+  {
+    "id": "adv_to_cc_science",
+    "name": "Toh Chin Chye – Science Council Established",
+    "text": "Scientific advancement improves long-term governance.",
+    "effects": { "leg": 3, "os": 1 },
+    "cost": 1
+  }
+]
