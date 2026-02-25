@@ -83,3 +83,38 @@ Includes resource, budget, and time-skip cheats.
 ---
 
 ## 📁 Project Structure
+
+---
+
+## ⚙️ Installation (Local Testing)
+
+1. Download ZIP or `git clone`
+2. Open `index.html` in any browser  
+3. Play instantly
+
+No dependencies required.
+
+---
+
+## 🌐 Deployment (GitHub Pages)
+
+1. Go to repo → *Settings*
+2. Scroll to **Pages**
+3. Set:
+   - Branch: `main`
+   - Folder: `/root`
+4. Save  
+5. Wait 30–40 seconds  
+6. Visit the public link
+
+---
+
+## © License
+MIT License  
+Free to modify, fork, and distribute.
+
+---
+
+## 👤 Created By
+Nate (Project Architect)  
+ChatGPT (Engine Developer)
