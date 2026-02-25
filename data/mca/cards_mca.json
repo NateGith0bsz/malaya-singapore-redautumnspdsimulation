@@ -1,0 +1,51 @@
+[
+  {
+    "id": "mca_reform_clubs",
+    "name": "Reformist Clubs Organized",
+    "text": "Chinese reformist circles strengthen the MCA Left.",
+    "cost": 2,
+    "effects": { "os": 2, "fu": 1 }
+  },
+  {
+    "id": "mca_trade_unions",
+    "name": "Chinese Trade Union Mobilization",
+    "text": "Trade unions become political engines for reform.",
+    "cost": 4,
+    "effects": { "ps": 4, "os": 3 }
+  },
+  {
+    "id": "mca_merger_negotiations",
+    "name": "MCA–PKMM Merger Negotiations",
+    "text": "The path toward Chinese–Malay socialist unity begins.",
+    "cost": 3,
+    "effects": { "fu": 2, "leg": 2 }
+  },
+  {
+    "id": "mca_anti_umno_media",
+    "name": "Anti-UMNO Media Campaign",
+    "text": "Chinese newspapers expose UMNO’s growing authoritarianism.",
+    "cost": 2,
+    "effects": { "leg": 3, "stab": -1 }
+  },
+  {
+    "id": "mca_socialist_education",
+    "name": "Launch Chinese Socialist Education Program",
+    "text": "Political education strengthens the socialist bloc.",
+    "cost": 3,
+    "effects": { "fu": 2, "ps": 1 }
+  },
+  {
+    "id": "mca_join_pkmm",
+    "name": "Merge MCA Left into PKMM (1949)",
+    "text": "Creates the Chinese Wing of the PKMM.",
+    "cost": 5,
+    "effects": { "ps": 4, "os": 3, "fu": 3 }
+  },
+  {
+    "id": "mca_chin_peng_influence",
+    "name": "Chin Peng Youth Bloc Expands",
+    "text": "Strengthens MCA’s role as the Chinese socialist vanguard.",
+    "cost": 3,
+    "effects": { "ps": 2, "os": 1 }
+  }
+]
